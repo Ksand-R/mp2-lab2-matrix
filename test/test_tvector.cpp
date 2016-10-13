@@ -27,6 +27,7 @@ TEST(TVector, can_create_copied_vector)
 	TVector<int> v(10);
 
 	ASSERT_NO_THROW(TVector<int> v1(v));
+
 }
 
 TEST(TVector, copied_vector_is_equal_to_source_one)
