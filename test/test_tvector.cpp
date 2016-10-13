@@ -121,14 +121,20 @@ TEST(TVector, compare_equal_vectors_return_true)
 	for (int i(0); i < 4; ++i)
 	{
 		v1[i] = 1;
-	}
+	}	
 	v2 = v1;
 	ASSERT_TRUE(v1 == v2);
 }
 
 TEST(TVector, compare_vector_with_itself_return_true)
 {
-	ADD_FAILURE();
+	TVector<int> v1(4);
+	for (int i(0); i < 4; ++i)
+	{
+		v1[i] = 1;
+	}
+	ASSERT_TRUE(v1 == v1);
+
 }
 
 TEST(TVector, vectors_with_different_size_are_not_equal)
