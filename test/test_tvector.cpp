@@ -90,7 +90,9 @@ TEST(TVector, can_assign_vector_to_itself)
 
 TEST(TVector, can_assign_vectors_of_equal_size)
 {
-	ADD_FAILURE();
+	TVector<int> v1(4);
+	TVector<int> v2(4);
+	ASSERT_NO_THROW(v1 = v2);
 }
 
 TEST(TVector, assign_operator_change_vector_size)
