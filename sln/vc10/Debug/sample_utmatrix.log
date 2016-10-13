@@ -1,0 +1,5 @@
+﻿  sample_matrix.cpp
+c:\users\alexander\onedrive\laba_2\include\utmatrix.h(298): warning C4715: 'TMatrix<int>::operator=': not all control paths return a value
+sample_matrix.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+  sample_utmatrix.vcxproj -> C:\Users\alexander\OneDrive\laba_2\sln\vc10\Debug\sample_utmatrix.exe
+  sample_utmatrix.vcxproj -> C:\Users\alexander\OneDrive\laba_2\sln\vc10\Debug\sample_utmatrix.pdb (Full PDB)
