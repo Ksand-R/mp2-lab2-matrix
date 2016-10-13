@@ -97,7 +97,11 @@ TEST(TVector, can_assign_vectors_of_equal_size)
 
 TEST(TVector, assign_operator_change_vector_size)
 {
-	ADD_FAILURE();
+	
+	TVector<int> v1(4);
+	TVector<int> v2(3);
+	v2 = v1;
+	ASSERT_EQ(v2.GetSize(), 4);
 }
 
 TEST(TVector, can_assign_vectors_of_different_size)
