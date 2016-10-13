@@ -206,8 +206,7 @@ TEST(TVector, cant_add_vectors_with_not_equal_size)
 {
 	TVector<int> v1(4);
 	TVector<int> v2(5);
-	TVector<int> v3(5);
-	ASSERT_ANY_THROW(v3 = v1 + v2);
+	ASSERT_ANY_THROW(v1 + v2);
 }
 
 TEST(TVector, can_subtract_vectors_with_equal_size)
@@ -228,21 +227,32 @@ TEST(TVector, cant_subtract_vectors_with_not_equal_size)
 {
 	TVector<int> v1(5);
 	TVector<int> v2(4);
-	TVector<int> v3(4);
-	ASSERT_ANY_THROW(v3 = v1 - v2);
+	ASSERT_ANY_THROW(v1 - v2);
 }
 
 TEST(TVector, can_multiply_vectors_with_equal_size)
 {
 	TVector<int> v1(4);
+	for (int i = 0; i < 4; i++)
+		v1[i] = 1;
+
 	TVector<int> v2(4);
-	TVector<int> v3(4);
-	v3 = v1 * v2;
-	ASSERT_ANY_THROW(v3 = v1 * v2);
+	for (int i = 0; i < 4; i++)
+		v2[i] = 2;
+
+	int scal = 0;
+	for (int i(0); i < 4; ++i)
+	{
+		scal += v2[i] * v1[i];
+	}
+
+	ASSERT_TRUE(scal == v1 * v2);
 
 }
 
 TEST(TVector, cant_multiply_vectors_with_not_equal_size)
 {
-	ADD_FAILURE();
+	TVector<int> v1(5);
+	TVector<int> v2(4);
+	ASSERT_ANY_THROW(v1 * v2);	
 }
