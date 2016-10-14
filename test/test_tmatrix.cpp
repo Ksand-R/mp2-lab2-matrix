@@ -27,16 +27,15 @@ TEST(TMatrix, can_create_copied_matrix)
 TEST(TMatrix, copied_matrix_is_equal_to_source_one)
 {
 
-	/*TMatrix<int> m(4);
+	TMatrix<int> m(4);
 	for (int i(0); i < 4; ++i)
 		for (int j(0); j < 4; ++j)
 	{
 		m[i][j] = 1;
 	}
-	TVector<int> m1();
+	TMatrix<int> m1(m);
 
-	EXPECT_EQ(m, m1);*/
-	ADD_FAILURE();
+	ASSERT_TRUE(m == m1);
 
 }
 
@@ -71,7 +70,7 @@ TEST(TMatrix, throws_when_set_element_with_negative_index)
 
 TEST(TMatrix, throws_when_set_element_with_too_large_index)
 {
-  ADD_FAILURE();
+	ASSERT_ANY_THROW(TMatrix<int> m(MAX_MATRIX_SIZE + 1));
 }
 
 TEST(TMatrix, can_assign_matrix_to_itself)
