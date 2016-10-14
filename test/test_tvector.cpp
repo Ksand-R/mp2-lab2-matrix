@@ -125,7 +125,8 @@ TEST(TVector, compare_equal_vectors_return_true)
 	for (int i(0); i < 4; ++i)
 	{
 		v1[i] = 1;
-	}	
+	}
+
 	v2 = v1;
 	ASSERT_TRUE(v1 == v2);
 }

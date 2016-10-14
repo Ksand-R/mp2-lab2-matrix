@@ -253,7 +253,6 @@ public:
 	TMatrix& operator= (const TMatrix &mt);        // присваивание
 	TMatrix  operator+ (const TMatrix &mt);        // сложение
 	TMatrix  operator- (const TMatrix &mt);        // вычитание
-
 												   // ввод / вывод
 	friend istream& operator >> (istream &in, TMatrix &mt)
 	{
@@ -271,8 +270,7 @@ public:
 
 template <class ValType>
 TMatrix<ValType>::TMatrix(int s) : TVector<TVector<ValType> >(s)
-{
-} /*-------------------------------------------------------------------------*/
+{} /*-------------------------------------------------------------------------*/
 
 template <class ValType> // конструктор копирования
 TMatrix<ValType>::TMatrix(const TMatrix<ValType> &mt) :
@@ -285,11 +283,13 @@ TMatrix<ValType>::TMatrix(const TVector<TVector<ValType> > &mt) :
 template <class ValType> // сравнение
 bool TMatrix<ValType>::operator==(const TMatrix<ValType> &mt) const
 {
+	return TVector <TVector<ValType> >:: operator ==(mt);
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType> // сравнение
 bool TMatrix<ValType>::operator!=(const TMatrix<ValType> &mt) const
 {
+	return Tvector <TVector<ValType> >:: operator !=(mt);
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType> // присваивание
@@ -315,12 +315,13 @@ TMatrix<ValType>& TMatrix<ValType>::operator=(const TMatrix<ValType> &mt)
 template <class ValType> // сложение
 TMatrix<ValType> TMatrix<ValType>::operator+(const TMatrix<ValType> &mt)
 {
-	return TMatrix(0);
+	return Tvector <TVector<ValType> >:: operator +(mt);
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType> // вычитание
 TMatrix<ValType> TMatrix<ValType>::operator-(const TMatrix<ValType> &mt)
 {
+	return Tvector <TVector<ValType> >:: operator -(mt);
 } /*-------------------------------------------------------------------------*/
 
   // TVector О3 Л2 П4 С6
