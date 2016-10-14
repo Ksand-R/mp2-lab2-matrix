@@ -278,6 +278,8 @@ TMatrix<ValType>::TMatrix(int s) : TVector<TVector<ValType> >(s)
 			pVector[i] = TVector <ValType>(s - i, i);
 		}
 	}
+	else 
+		throw 1;
 }
 /*-------------------------------------------------------------------------*/
 
