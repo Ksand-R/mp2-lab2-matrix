@@ -70,13 +70,12 @@ TEST(TVector, can_set_and_get_element)
 	TVector<int> v(4);
 	v[0] = 4;
 
-	EXPECT_EQ(4, v[0]);
+	EXPECT_EQ(4, v[0]);	
 }
 
 TEST(TVector, throws_when_set_element_with_negative_index)
 {
 	TVector<int> v(4);
-
 	ASSERT_ANY_THROW(v[-2]);
 }
 

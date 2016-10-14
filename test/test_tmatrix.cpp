@@ -58,9 +58,8 @@ TEST(TMatrix, can_get_size)
 TEST(TMatrix, can_set_and_get_element)
 {
 	TMatrix<int> m(4);
-	m[0][0] = 4;
-
-	EXPECT_EQ(4, m[0][0]);
+	m[0][0] = 1;
+	EXPECT_EQ(1, m[0][0]);
 }
 
 TEST(TMatrix, throws_when_set_element_with_negative_index)

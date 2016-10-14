@@ -96,7 +96,7 @@ TVector<ValType>::~TVector()
 template <class ValType> // доступ
 ValType& TVector<ValType>::operator[](int pos)
 {
-	if ((pos >= 0) && (pos < Size))
+	if ((pos >= StartIndex) && (pos < Size + StartIndex))
 	{
 		return pVector[pos - StartIndex];
 	}
@@ -270,7 +270,16 @@ public:
 
 template <class ValType>
 TMatrix<ValType>::TMatrix(int s) : TVector<TVector<ValType> >(s)
-{} /*-------------------------------------------------------------------------*/
+{
+	if ((s >= 0) && (s < MAX_MATRIX_SIZE))
+	{
+		for (int i(0); i < s; ++i)
+		{
+			pVector[i] = TVector <ValType>(s - i, i);
+		}
+	}
+}
+/*-------------------------------------------------------------------------*/
 
 template <class ValType> // конструктор копирования
 TMatrix<ValType>::TMatrix(const TMatrix<ValType> &mt) :
