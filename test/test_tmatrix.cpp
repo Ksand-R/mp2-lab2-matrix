@@ -35,7 +35,9 @@ TEST(TMatrix, copied_matrix_is_equal_to_source_one)
 	}
 	TMatrix<int> m1(m);
 
-	ASSERT_TRUE(m == m1);
+	EXPECT_EQ(m, m1);
+
+
 
 }
 
@@ -75,22 +77,31 @@ TEST(TMatrix, throws_when_set_element_with_too_large_index)
 
 TEST(TMatrix, can_assign_matrix_to_itself)
 {
-  ADD_FAILURE();
+	TMatrix<int> m(4);
+	ASSERT_NO_THROW(m = m);
 }
 
 TEST(TMatrix, can_assign_matrices_of_equal_size)
 {
-  ADD_FAILURE();
+	TMatrix<int> m1(3);
+	TMatrix<int> m2(3);
+	ASSERT_NO_THROW(m1 = m2);
 }
 
 TEST(TMatrix, assign_operator_change_matrix_size)
 {
-  ADD_FAILURE();
+	TMatrix <int> m1(4), m2(2);
+	m1 = m2;
+	EXPECT_TRUE(2 == m1.GetSize());
 }
 
 TEST(TMatrix, can_assign_matrices_of_different_size)
 {
-  ADD_FAILURE();
+	TMatrix<int> m1(4);
+	TMatrix<int> m2(3);
+	m1[2][2] = 1;
+	m2 = m1;
+	ASSERT_EQ(m2[2][2], 1);
 }
 
 TEST(TMatrix, compare_equal_matrices_return_true)

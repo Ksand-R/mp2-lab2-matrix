@@ -1,9 +1,6 @@
 ﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (gtest.vcxproj, sample_utmatrix.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   test_tmatrix.cpp
-  Generating Code...
-  Compiling...
-  test_tvector.cpp
-  Generating Code...
+c:\users\ksand_r\onedrive\laba_2\include\utmatrix.h(324): warning C4715: 'TMatrix<int>::operator=': not all control paths return a value
 C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (sample_utmatrix.vcxproj, test_utmatrix.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  test_utmatrix.vcxproj -> C:\Users\alexander\OneDrive\laba_2\sln\vc10\Debug\test_utmatrix.exe
-  test_utmatrix.vcxproj -> C:\Users\alexander\OneDrive\laba_2\sln\vc10\Debug\test_utmatrix.pdb (Full PDB)
+  test_utmatrix.vcxproj -> C:\Users\Ksand_R\OneDrive\laba_2\sln\vc10\Debug\test_utmatrix.exe
+  test_utmatrix.vcxproj -> C:\Users\Ksand_R\OneDrive\laba_2\sln\vc10\Debug\test_utmatrix.pdb (Full PDB)
