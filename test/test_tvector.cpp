@@ -34,6 +34,10 @@ TEST(TVector, copied_vector_is_equal_to_source_one)
 {
 	
 	TVector<int> v(4);
+	for (int i(0); i < 4; ++i)
+	{
+		v[i] = 1;
+	}
 	TVector<int> v1(v);
 
 	EXPECT_EQ(v, v1);
@@ -44,7 +48,7 @@ TEST(TVector, copied_vector_has_its_own_memory)
 	TVector<int> v1(4);
 	TVector<int> v2(4);
 	v2[2] = -1;
-	EXPECT_NE(v1[2], v2[2]);
+	EXPECT_TRUE(&v1[2] != &v2[2]);
 }
 
 TEST(TVector, can_get_size)
@@ -141,8 +145,6 @@ TEST(TVector, vectors_with_different_size_are_not_equal)
 {
 	TVector<int> v1(4);
 	TVector<int> v2(3);
-	v1[2] = 1;
-	v2[2] = 1;
 	ASSERT_FALSE(v1 == v2);
 }
 

@@ -160,6 +160,7 @@ TVector<ValType>& TVector<ValType>::operator=(const TVector &v)
 		}
 		Size = v.Size;
 		StartIndex = v.StartIndex;
+		//memcpy(pVector, v.pVector, sizeof(ValType)*Size);
 		for (int i(0); i < Size; ++i)
 			pVector[i] = v.pVector[i];
 	}
