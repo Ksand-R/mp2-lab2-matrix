@@ -129,23 +129,13 @@ bool TVector<ValType>::operator==(const TVector &v) const
 template <class ValType> // сравнение
 bool TVector<ValType>::operator!=(const TVector &v) const
 {
-	if (this->Size == v.Size)
+	if (*this == v)
 	{
-		bool flag = false;
-		for (int i(0); i < Size; i++)
-		{
-			if (this->pVector[i] == v.pVector[i])
-			{
-				flag = true;
-				break;
-			}
-		}
-		return flag;
+		return false;
 	}
 	else
-	{
 		return true;
-	}
+	
 }/*-------------------------------------------------------------------------*/
 
 template <class ValType> // присваивание
@@ -160,9 +150,9 @@ TVector<ValType>& TVector<ValType>::operator=(const TVector &v)
 		}
 		Size = v.Size;
 		StartIndex = v.StartIndex;
-		//memcpy(pVector, v.pVector, sizeof(ValType)*Size);
-		for (int i(0); i < Size; ++i)
-			pVector[i] = v.pVector[i];
+		memcpy(pVector, v.pVector, sizeof(ValType)*Size);
+		/*for (int i(0); i < Size; ++i)
+			pVector[i] = v.pVector[i];*/
 	}
 	return *this;
 } /*-------------------------------------------------------------------------*/

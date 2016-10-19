@@ -99,19 +99,28 @@ TEST(TMatrix, can_assign_matrices_of_different_size)
 {
 	TMatrix<int> m1(4);
 	TMatrix<int> m2(3);
-	m1[2][2] = 1;
+	for (int i = 0; i < 4; i++)
+		m1[i][i] = i;
 	m2 = m1;
-	ASSERT_EQ(m2[2][2], 1);
+	EXPECT_EQ(m1, m2);
 }
 
 TEST(TMatrix, compare_equal_matrices_return_true)
 {
-  ADD_FAILURE();
+	TMatrix<int> m1(4);
+	TMatrix<int> m2(4);
+	for (int i(0); i < 4; ++i)
+	{	
+		m1[i] = 1;
+	}
+
+	m2 = m1;
+	ASSERT_TRUE(m1 == m2);
 }
 
 TEST(TMatrix, compare_matrix_with_itself_return_true)
 {
-  ADD_FAILURE();
+ 
 }
 
 TEST(TMatrix, matrices_with_different_size_are_not_equal)
