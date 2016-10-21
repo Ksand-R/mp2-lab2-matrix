@@ -60,7 +60,7 @@ public:
 };
 
 template <class ValType>
-TVector<ValType>::TVector(int s, int si)
+TVector<ValType>::TVector(int s, int si) //конструктор с инициализацией
 {
 	if ((s >= 0) && (si >= 0) && (s<MAX_VECTOR_SIZE) && (si<MAX_VECTOR_SIZE))
 	{
@@ -107,7 +107,7 @@ ValType& TVector<ValType>::operator[](int pos)
 template <class ValType> // сравнение
 bool TVector<ValType>::operator==(const TVector &v) const
 {
-	if (this->Size == v.Size)
+	if ((this->Size == v.Size) && (StartIndex == v.StartIndex))
 	{
 		bool flag = true;
 		for (int i(0); i < Size; i++)
@@ -190,7 +190,7 @@ TVector<ValType> TVector<ValType>::operator*(const ValType &val)
 template <class ValType> // сложение
 TVector<ValType> TVector<ValType>::operator+(const TVector<ValType> &v)
 {
-	if ((Size == v.Size) && (Size >= 0))
+	if (Size == v.Size)
 	{
 		TVector temp(Size, StartIndex);
 		for (int i(0); i < Size; ++i)
@@ -311,18 +311,19 @@ TMatrix<ValType>& TMatrix<ValType>::operator=(const TMatrix<ValType> &mt)
 		}
 		return *this;
 	}
+	else return *this;
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType> // сложение
 TMatrix<ValType> TMatrix<ValType>::operator+(const TMatrix<ValType> &mt)
 {
-	return Tvector <TVector<ValType> >:: operator +(mt);
+	return TVector <TVector<ValType> >:: operator +(mt);
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType> // вычитание
 TMatrix<ValType> TMatrix<ValType>::operator-(const TMatrix<ValType> &mt)
 {
-	return Tvector <TVector<ValType> >:: operator -(mt);
+	return TVector <TVector<ValType> >:: operator -(mt);
 } /*-------------------------------------------------------------------------*/
 
   // TVector О3 Л2 П4 С6

@@ -1,55 +1,53 @@
-﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppClean.targets(76,5): warning : The process cannot access the file 'c:\users\alexander\onedrive\laba_2\sln\vc10\debug\gtest.idb' because it is being used by another process.
-C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppClean.targets(76,5): warning : The process cannot access the file 'c:\users\alexander\onedrive\laba_2\sln\vc10\debug\gtest.pdb' because it is being used by another process.
-C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (gtest.vcxproj, test_utmatrix.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (test_utmatrix.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   sample_matrix.cpp
-c:\users\alexander\onedrive\laba_2\include\utmatrix.h(329): error C2065: 'Tvector': undeclared identifier
-  c:\users\alexander\onedrive\laba_2\include\utmatrix.h(328): note: while compiling class template member function 'TMatrix<int> TMatrix<int>::operator +(const TMatrix<int> &)'
+c:\users\alexander\onedrive\laba_2\include\utmatrix.h(319): error C2065: 'Tvector': undeclared identifier
+  c:\users\alexander\onedrive\laba_2\include\utmatrix.h(318): note: while compiling class template member function 'TMatrix<int> TMatrix<int>::operator +(const TMatrix<int> &)'
   c:\users\alexander\onedrive\laba_2\samples\sample_matrix.cpp(26): note: see reference to function template instantiation 'TMatrix<int> TMatrix<int>::operator +(const TMatrix<int> &)' being compiled
   c:\users\alexander\onedrive\laba_2\samples\sample_matrix.cpp(14): note: see reference to class template instantiation 'TMatrix<int>' being compiled
-c:\users\alexander\onedrive\laba_2\include\utmatrix.h(329): error C2275: 'TVector<ValType>': illegal use of this type as an expression
+c:\users\alexander\onedrive\laba_2\include\utmatrix.h(319): error C2275: 'TVector<ValType>': illegal use of this type as an expression
           with
           [
               ValType=int
           ]
-  c:\users\alexander\onedrive\laba_2\include\utmatrix.h(245): note: see declaration of 'TVector<ValType>'
+  c:\users\alexander\onedrive\laba_2\include\utmatrix.h(235): note: see declaration of 'TVector<ValType>'
           with
           [
               ValType=int
           ]
-c:\users\alexander\onedrive\laba_2\include\utmatrix.h(329): error C2672: 'std::operator +': no matching overloaded function found
-c:\users\alexander\onedrive\laba_2\include\utmatrix.h(329): error C2780: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem)': expects 2 arguments - 1 provided
+c:\users\alexander\onedrive\laba_2\include\utmatrix.h(319): error C2672: 'std::operator +': no matching overloaded function found
+c:\users\alexander\onedrive\laba_2\include\utmatrix.h(319): error C2780: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem)': expects 2 arguments - 1 provided
   c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2446): note: see declaration of 'std::operator +'
-c:\users\alexander\onedrive\laba_2\include\utmatrix.h(329): error C2780: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem *)': expects 2 arguments - 1 provided
+c:\users\alexander\onedrive\laba_2\include\utmatrix.h(319): error C2780: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem *)': expects 2 arguments - 1 provided
   c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2436): note: see declaration of 'std::operator +'
-c:\users\alexander\onedrive\laba_2\include\utmatrix.h(329): error C2780: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,std::basic_string<_Elem,_Traits,_Alloc> &&)': expects 2 arguments - 1 provided
+c:\users\alexander\onedrive\laba_2\include\utmatrix.h(319): error C2780: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,std::basic_string<_Elem,_Traits,_Alloc> &&)': expects 2 arguments - 1 provided
   c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2424): note: see declaration of 'std::operator +'
-c:\users\alexander\onedrive\laba_2\include\utmatrix.h(329): error C2780: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *,std::basic_string<_Elem,_Traits,_Alloc> &&)': expects 2 arguments - 1 provided
+c:\users\alexander\onedrive\laba_2\include\utmatrix.h(319): error C2780: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *,std::basic_string<_Elem,_Traits,_Alloc> &&)': expects 2 arguments - 1 provided
   c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2414): note: see declaration of 'std::operator +'
-c:\users\alexander\onedrive\laba_2\include\utmatrix.h(329): error C2780: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,std::basic_string<_Elem,_Traits,_Alloc> &&)': expects 2 arguments - 1 provided
+c:\users\alexander\onedrive\laba_2\include\utmatrix.h(319): error C2780: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,std::basic_string<_Elem,_Traits,_Alloc> &&)': expects 2 arguments - 1 provided
   c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2400): note: see declaration of 'std::operator +'
-c:\users\alexander\onedrive\laba_2\include\utmatrix.h(329): error C2780: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const std::basic_string<_Elem,_Traits,_Alloc> &)': expects 2 arguments - 1 provided
+c:\users\alexander\onedrive\laba_2\include\utmatrix.h(319): error C2780: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const std::basic_string<_Elem,_Traits,_Alloc> &)': expects 2 arguments - 1 provided
   c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2390): note: see declaration of 'std::operator +'
-c:\users\alexander\onedrive\laba_2\include\utmatrix.h(329): error C2780: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,std::basic_string<_Elem,_Traits,_Alloc> &&)': expects 2 arguments - 1 provided
+c:\users\alexander\onedrive\laba_2\include\utmatrix.h(319): error C2780: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,std::basic_string<_Elem,_Traits,_Alloc> &&)': expects 2 arguments - 1 provided
   c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2380): note: see declaration of 'std::operator +'
-c:\users\alexander\onedrive\laba_2\include\utmatrix.h(329): error C2780: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': expects 2 arguments - 1 provided
+c:\users\alexander\onedrive\laba_2\include\utmatrix.h(319): error C2780: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': expects 2 arguments - 1 provided
   c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2366): note: see declaration of 'std::operator +'
-c:\users\alexander\onedrive\laba_2\include\utmatrix.h(329): error C2780: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *)': expects 2 arguments - 1 provided
+c:\users\alexander\onedrive\laba_2\include\utmatrix.h(319): error C2780: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *)': expects 2 arguments - 1 provided
   c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2352): note: see declaration of 'std::operator +'
-c:\users\alexander\onedrive\laba_2\include\utmatrix.h(329): error C2780: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,const std::basic_string<_Elem,_Traits,_Alloc> &)': expects 2 arguments - 1 provided
+c:\users\alexander\onedrive\laba_2\include\utmatrix.h(319): error C2780: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,const std::basic_string<_Elem,_Traits,_Alloc> &)': expects 2 arguments - 1 provided
   c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2338): note: see declaration of 'std::operator +'
-c:\users\alexander\onedrive\laba_2\include\utmatrix.h(329): error C2780: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *,const std::basic_string<_Elem,_Traits,_Alloc> &)': expects 2 arguments - 1 provided
+c:\users\alexander\onedrive\laba_2\include\utmatrix.h(319): error C2780: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *,const std::basic_string<_Elem,_Traits,_Alloc> &)': expects 2 arguments - 1 provided
   c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2324): note: see declaration of 'std::operator +'
-c:\users\alexander\onedrive\laba_2\include\utmatrix.h(329): error C2780: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &)': expects 2 arguments - 1 provided
+c:\users\alexander\onedrive\laba_2\include\utmatrix.h(319): error C2780: 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &)': expects 2 arguments - 1 provided
   c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2310): note: see declaration of 'std::operator +'
-c:\users\alexander\onedrive\laba_2\include\utmatrix.h(329): error C2780: 'std::_String_iterator<_Mystr> std::operator +(_String_iterator<_Mystr>::difference_type,std::_String_iterator<_Mystr>)': expects 2 arguments - 1 provided
+c:\users\alexander\onedrive\laba_2\include\utmatrix.h(319): error C2780: 'std::_String_iterator<_Mystr> std::operator +(_String_iterator<_Mystr>::difference_type,std::_String_iterator<_Mystr>)': expects 2 arguments - 1 provided
   c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(425): note: see declaration of 'std::operator +'
-c:\users\alexander\onedrive\laba_2\include\utmatrix.h(329): error C2780: 'std::_String_const_iterator<_Mystr> std::operator +(_String_const_iterator<_Mystr>::difference_type,std::_String_const_iterator<_Mystr>)': expects 2 arguments - 1 provided
+c:\users\alexander\onedrive\laba_2\include\utmatrix.h(319): error C2780: 'std::_String_const_iterator<_Mystr> std::operator +(_String_const_iterator<_Mystr>::difference_type,std::_String_const_iterator<_Mystr>)': expects 2 arguments - 1 provided
   c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(293): note: see declaration of 'std::operator +'
-c:\users\alexander\onedrive\laba_2\include\utmatrix.h(329): error C2780: 'std::move_iterator<_RanIt> std::operator +(_Diff,const std::move_iterator<_RanIt> &)': expects 2 arguments - 1 provided
+c:\users\alexander\onedrive\laba_2\include\utmatrix.h(319): error C2780: 'std::move_iterator<_RanIt> std::operator +(_Diff,const std::move_iterator<_RanIt> &)': expects 2 arguments - 1 provided
   c:\program files (x86)\microsoft visual studio 14.0\vc\include\xutility(2195): note: see declaration of 'std::operator +'
-c:\users\alexander\onedrive\laba_2\include\utmatrix.h(329): error C2780: 'std::_Array_iterator<_Ty,_Size> std::operator +(_Array_iterator<_Ty,_Size>::difference_type,std::_Array_iterator<_Ty,_Size>)': expects 2 arguments - 1 provided
+c:\users\alexander\onedrive\laba_2\include\utmatrix.h(319): error C2780: 'std::_Array_iterator<_Ty,_Size> std::operator +(_Array_iterator<_Ty,_Size>::difference_type,std::_Array_iterator<_Ty,_Size>)': expects 2 arguments - 1 provided
   c:\program files (x86)\microsoft visual studio 14.0\vc\include\xutility(2046): note: see declaration of 'std::operator +'
-c:\users\alexander\onedrive\laba_2\include\utmatrix.h(329): error C2780: 'std::_Array_const_iterator<_Ty,_Size> std::operator +(_Array_const_iterator<_Ty,_Size>::difference_type,std::_Array_const_iterator<_Ty,_Size>)': expects 2 arguments - 1 provided
+c:\users\alexander\onedrive\laba_2\include\utmatrix.h(319): error C2780: 'std::_Array_const_iterator<_Ty,_Size> std::operator +(_Array_const_iterator<_Ty,_Size>::difference_type,std::_Array_const_iterator<_Ty,_Size>)': expects 2 arguments - 1 provided
   c:\program files (x86)\microsoft visual studio 14.0\vc\include\xutility(1910): note: see declaration of 'std::operator +'
-c:\users\alexander\onedrive\laba_2\include\utmatrix.h(329): error C2780: 'std::reverse_iterator<_RanIt> std::operator +(reverse_iterator<_RanIt>::difference_type,const std::reverse_iterator<_RanIt> &)': expects 2 arguments - 1 provided
+c:\users\alexander\onedrive\laba_2\include\utmatrix.h(319): error C2780: 'std::reverse_iterator<_RanIt> std::operator +(reverse_iterator<_RanIt>::difference_type,const std::reverse_iterator<_RanIt> &)': expects 2 arguments - 1 provided
   c:\program files (x86)\microsoft visual studio 14.0\vc\include\xutility(1280): note: see declaration of 'std::operator +'
